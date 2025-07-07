@@ -45,9 +45,9 @@ def load_langraph_agentic_app():
                 DisplayResultStreamlit(usecase=usecase,graph=graph, user_message=user_message).display_result_on_ui()
 
             except Exception as e:
-                st.error(f"Error: Graph setup failed: {e}")
+                st.error(f"Errorddd: Graph setup failed: {e}")
         except Exception as e:
-            st.error(f'Error: Graph setup failed: {e}')
+            st.error(f'Errorsss: Graph setup failed: {e}')
             return
 
 
