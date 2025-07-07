@@ -1,6 +1,8 @@
-from langgraph.graph import StateGraph, START, END
+from langgraph.graph import StateGraph
 from src.langgraphagenticai.state.state import State
-from src.langgraphagenticai.nodes.basic_chatbot_node import BasicChatBotNode
+from langgraph.graph import START,END
+from src.langgraphagenticai.nodes.basic_chatbot_node import BasicChatbotNode
+
 
 class GraphBuilder:
     def __init__(self,model):
@@ -15,7 +17,7 @@ class GraphBuilder:
         entry and exit point of the graph.
         """
 
-        self.basic_chatbot_node=BasicChatBotNode(self.llm)
+        self.basic_chatbot_node=BasicChatbotNode(self.llm)
 
         self.graph_builder.add_node("chatbot",self.basic_chatbot_node.process)
         self.graph_builder.add_edge(START,"chatbot")
